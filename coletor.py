@@ -14,7 +14,7 @@ import sys
 
 def conexao():
     try:
-        db_connection = mysql.connector.connect(host="localhost", user="pythonuser", passwd="bQa*F8RoobyY", database="lgnmoneyapi")
+        db_connection = mysql.connector.connect(host="localhost", user="seuusuariodobanco", passwd="suasenha", database="seudatabase")
         return db_connection
         print("Database connection made!")
     except mysql.connector.Error as error:
@@ -52,9 +52,6 @@ def buscaElementosUrlGeral(url, codigoCep, codigo):
             botaoBuscar = driver.find_element_by_xpath('//*[@id="btn_pesquisar"]')
             time.sleep(0.5)
             botaoBuscar.click()
-
-        # time.sleep(1.6)
-        # esperar a pagina carregar com a info
 
         tabelaComInformacoes = WebDriverWait(driver, 20).until(
             EC.presence_of_element_located((By.ID, 'resultado-DNEC')))
@@ -112,9 +109,6 @@ def main(codigoInicial, codigoFinal):
 
 
 if __name__ == "__main__":
-    # main(20610,35000)
-    # main(20600, 20690)
-
     codigoInicial = sys.argv[1]
     codigoFinal = sys.argv[2]
     main(codigoInicial, codigoFinal)
