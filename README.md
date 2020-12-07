@@ -1,4 +1,4 @@
-# CrawlerCepEnderecos
+# Coletor de Ceps
     Projeto criado para pegar um cep da tabela do banco de dados e coletar o endereço completo no site dos correios,
     atualizando o registro no banco de dados novamente. Necessário ter os ceps cadastrados no banco de dados. 
     A estrutura utilizada para a tabela do cep está abaixo.
